@@ -13,15 +13,18 @@
 
 .btn-main {
   color: #333;
-  background-color: #ffbc00; }
+  background-color: #ffbc00;
+  box-shadow: 0px 0px 10px #888; }
 
 .btn-light {
   color: #333;
-  background-color: #f4f4f4; }
+  background-color: #f4f4f4;
+  box-shadow: 0px 0px 10px #888; }
 
 .btn-dark {
   color: #f4f4f4;
-  background-color: #333; }
+  background-color: #333;
+  box-shadow: 0px 0px 10px #888; }
 
 button[class^='btn-']:hover,
 a[class^='btn-']:hover,
@@ -36,8 +39,56 @@ input[class^='btn-']:hover {
   text-align: center; }
 
 .txt-type > .txt {
-  border-right: 0.2rem solid #777;
-  padding-right: 0.2rem; }
+  border-right: 0.2rem solid #575353;
+  padding-right: 0.2rem;
+  animation: 1.5s ease-in-out 0.2s infinite typing-border; }
+
+@keyframes typing-border {
+  0% {
+    border-right: 0.2rem solid #575353; }
+  50% {
+    border-right: 0.2rem solid rgba(87, 83, 83, 0); }
+  100% {
+    border-right: 0.2rem solid #575353; } }
+
+.py-1 {
+  padding: 1rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.py-4 {
+  padding: 4rem 0; }
+
+.my-1 {
+  margin: 1rem 0; }
+
+.my-2 {
+  margin: 2rem 0; }
+
+.my-3 {
+  margin: 3rem 0; }
+
+.my-4 {
+  margin: 4rem 0; }
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase; }
+
+.bottom-line {
+  height: 1px;
+  width: 4rem;
+  background: #ffbc00;
+  display: block;
+  margin: 0 auto 1rem auto; }
 
 * {
   margin: 0;
@@ -48,7 +99,7 @@ body {
   font-family: 'Dosis', sans-serif;
   line-height: 1.6;
   background: #fff;
-  color: #fff; }
+  color: #333; }
 
 a {
   text-decoration: none;
@@ -69,7 +120,8 @@ img {
   width: 70px;
   height: 70px;
   color: white;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-shadow: 1px 1px 20px #fff; }
 
 #main-nav {
   display: flex;
@@ -95,13 +147,14 @@ img {
     color: #fff;
     text-transform: uppercase;
     border-bottom: 2px transparent solid;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
     transition: all 0.3s ease-in; }
     #main-nav a:hover {
       border-color: #ccc;
       padding-bottom: 0.2rem; }
     #main-nav a.current {
-      border-color: #ffbc00; }
+      border-color: #ffbc00;
+      padding-bottom: 0.2rem; }
 
 #header-home {
   position: relative;
@@ -129,7 +182,7 @@ img {
 
 #header-home::before {
   content: '';
-  background: url("../img/showcase.jpg") no-repeat center center/cover;
+  background: url("../img/showcase.jpg") no-repeat fixed center center/cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -137,3 +190,58 @@ img {
   width: 100%;
   opacity: 0.7;
   z-index: -1; }
+
+#home-a .specials {
+  margin-top: 3rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr); }
+  #home-a .specials .fas {
+    color: #ffbc00;
+    padding-bottom: 0.4rem; }
+
+#home-b .stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+  #home-b .stats li {
+    line-height: 2; }
+    #home-b .stats li.stats-title {
+      font-size: 1.5rem; }
+    #home-b .stats li.stats-text {
+      font-size: 1.5rem;
+      font-weight: bold; }
+  #home-b .stats div {
+    padding: 3rem 0; }
+    #home-b .stats div:nth-child(even) {
+      background: #f4f4f4; }
+    #home-b .stats div:nth-child(odd) {
+      background: #ccc; }
+
+#home-c .process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  text-align: center; }
+
+#main-footer {
+  background: #333;
+  color: #fff; }
+  #main-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #main-footer .footer-content .photo-copy {
+      font-size: 0.7rem; }
+  #main-footer .social {
+    margin: 0.5rem 0; }
+  #main-footer .social a {
+    color: #fff; }
+  #main-footer .social .fab {
+    display: inline-block;
+    margin-right: 1rem;
+    border-radius: 70%;
+    box-shadow: 0px 0px 3px #888;
+    padding: 0.5em 0.6em;
+    transition: all 0.5s ease-in-out; }
+    #main-footer .social .fab:hover {
+      background: #ffbc00; }

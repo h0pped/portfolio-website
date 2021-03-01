@@ -26,7 +26,7 @@ TypeWritter.prototype.type=function(){
     }
 
     // Insert txt into element
-    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`
+    this.txtElement.innerHTML = `<span class="txt" id="txt-id">${this.txt}</span>`
 
     // Initial Type speed
     let typespeed = 150;
