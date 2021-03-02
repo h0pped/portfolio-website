@@ -61,6 +61,10 @@ document.addEventListener('DOMContentLoaded',init);
 
 // Init app
 
+$(window).load(function() {
+    $("body").addClass('all-loaded');
+});
+
 function init(){
     const txtElement = document.querySelector('.txt-type');
     const words = JSON.parse(txtElement.getAttribute('data-words'));
