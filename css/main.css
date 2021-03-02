@@ -512,6 +512,8 @@ img {
     border-bottom: 3px solid #ffbc00; }
     #header-home h1 {
       font-size: 1.7rem !important; }
+    #header-home a.btn-light {
+      display: none; }
   #header-inner {
     height: 7rem; }
   .lead {
