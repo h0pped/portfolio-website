@@ -113,12 +113,15 @@ input[class^='btn-']:hover {
 .items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  grid-gap: 0.3rem; }
 
 .item {
   position: relative;
   background: #ffbc00;
   overflow: hidden; }
+  .item-soon {
+    background: #333; }
   .item::after {
     content: '';
     position: absolute;
@@ -295,7 +298,7 @@ img {
 
 #header-inner:before {
   content: '';
-  background: url("../img/showcase.jpeg") no-repeat fixed 50% 90%/cover;
+  background: url("../img/showcase.jpeg") no-repeat fixed center center/cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -512,9 +515,6 @@ img {
       font-size: 1.7rem !important; }
     #header-home a.btn-light {
       display: none; }
-  #header-home::before {
-    content: '';
-    background-position-y: -5rem; }
   #header-inner {
     height: 7rem; }
   .lead {
